@@ -13,8 +13,8 @@ Public Class Form1
 
     Protected Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         DebugLog("User Clicked Save Button")
-        'leaving a defect in here on purpose'
-        Dim textToSave = FormatText(TextBox1.Text, TextBox2.Text, 0.04, TextBox4.Text, TextBox5.Text, TextBox6.Text)
+        DebugLog(String.Format("Value1: {0}, Value2: {1}, Value3: {2}, Value4: {3}, Value5: {4}, Value6: {5}", TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text))
+        Dim textToSave = FormatText(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text)
         SaveOutputFile(textToSave)
     End Sub
 
